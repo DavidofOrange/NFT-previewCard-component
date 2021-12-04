@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+$colors: (
+    softBlue: hsl(215, 51%, 70%),
+    cyan: hsl(178, 100%, 50%),
+    mainBGDarkBlue: hsl(217, 54%, 11%),
+    cardBGDarkBlue: hsl(216, 50%, 16%),
+    lineDarkBlue: hsl(215, 32%, 27%),
+    white: hsl(0, 0%, 100%)
+);
+
+@function color($color){
+    @return map-get($colors, $color);
+}
+
+$fontStyles: (
+    pFontSize: 18px,
+    
+);
+
+
+body {
+   font-family: 'Outfit', sans-serif;
+   background: color(mainBGDarkBlue);
+}
+
+#card {
+    background: color(cardBGDarkBlue);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    max-width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+}
+#equilibrium-img {
+    max-width: 350px;
+}
+
+h1 {
+    color: color(white);
+}
+
+.main-text {
+   color: color(softBlue); 
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
