@@ -57,12 +57,13 @@ img {
   display: block;
 }
 
-h2 {
-  padding: 3% 0;
+h1 {
+  padding: 6% 0;
   color: white;
+  font-size: 1.4rem;
 }
 
-h2:hover {
+h1:hover {
   color: #00fff7;
   cursor: pointer;
 }

@@ -78,12 +78,13 @@ img {
 }
 
 
-h2 {
-    padding: 3% 0;
+h1 {
+    padding: 6% 0;
     color: color(white);
+    font-size: 1.4rem;
 }
 
-h2:hover {
+h1:hover {
     color: color(cyan);
     cursor: pointer;
 }
