@@ -15,37 +15,59 @@ body {
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
-  max-width: 350px;
-  padding: 30px;
+  width: 75%;
+  max-width: 375px;
+  padding: 1.35rem;
   border-radius: 15px;
+}
+
+#equilibrium-img {
+  border-radius: 10px;
 }
 
 ul {
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.2rem;
+  border-bottom: 0.01rem solid #2f415b;
 }
 
-#equilibrium-img {
-  max-width: 350px;
+#card ul li {
+  display: flex;
 }
 
 img {
   max-width: 100%;
 }
 
-h1 {
+h2 {
+  padding: 3% 0;
   color: white;
+}
+
+.main-text {
+  padding-bottom: 3%;
 }
 
 p {
   color: #8bacda;
 }
 
-#ethureum-icon {
+#ethereum-icon {
   color: #00fff7;
 }
 
 #clock-icon {
   color: #8bacda;
+}
+
+#avatar-img {
+  width: 12%;
+  border: solid 2px white;
+  border-radius: 50%;
+  margin-top: 15px;
 }
 
 .attribution {
