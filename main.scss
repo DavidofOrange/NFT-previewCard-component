@@ -21,11 +21,15 @@ $fontStyles: (
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
    font-family: 'Outfit', sans-serif;
    background: color(mainBGDarkBlue);
+   display:         flex;
+   justify-content: center;
+   align-items:     center;
 }
 
 #card {
@@ -39,30 +43,49 @@ body {
     padding: 1.35rem;
     border-radius: 15px;
 }
-#equilibrium-img{
-    border-radius: 10px;
-}
-
-ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 1.2rem;
-    border-bottom: 0.01rem solid color(lineDarkBlue);
-}
-
-#card ul li {
-    display: flex;
-}
 
 img {
     max-width: 100%;
 }
 
+
+#equilibrium-img-container {
+    position: relative;
+    border-radius: 10px; 
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#equilibrium-img-container::after {
+    background: rgba(0, 255, 255, 0.493);
+    content: url(images/icon-view.svg);
+    position: absolute;
+    inset: 0;
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+#equilibrium-img-container:hover::after {
+    opacity: 1;
+}
+
+#equilibrium-img-container img {
+    width: 100%;
+    display: block;
+}
+
+
 h2 {
     padding: 3% 0;
     color: color(white);
+}
+
+h2:hover {
+    color: color(cyan);
+    cursor: pointer;
 }
 
 .main-text {
@@ -73,6 +96,23 @@ p {
     color: color(softBlue); 
 }
 
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 0.01rem solid color(lineDarkBlue);
+}
+
+#card ul li {
+    display: flex;
+}
+
+#card ul li img {
+    margin-right: .3rem;
+}
+
 #ethereum-icon {
     color: color(cyan);
 }
@@ -81,17 +121,43 @@ p {
     color: color(softBlue);
 }
 
+#avatar-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0.5rem 0 1rem;
+}
+
 #avatar-img {
-    width: 12%;
+    width: 10%;
     border: solid 2px white;
     border-radius: 50%;
-    margin-top: 15px;
+    margin-right: 1rem;
+}
+
+#seller {
+    color: color(white);
+}
+
+#seller:hover {
+    color: color(cyan);
+    cursor: pointer;
 }
 
 .attribution { 
-    font-size: 11px; text-align: center; 
+    font-size: 11px; 
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
 }
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-height: 800px){
+    .attribution {
+        display: none;
+    }
 }
